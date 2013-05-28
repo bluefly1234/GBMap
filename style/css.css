@@ -1,0 +1,128 @@
+/*
+ *	By givebest
+ *  E-mail:givenlovs@msn.com
+ */
+@charset "utf-8";
+html{
+	color:#000;background:#fff;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0;
+}
+body,button,input,select,textarea{
+	font:12px/1.5 \5b8b\4f53,tahoma,arial;
+	color:#675c58;
+}
+fieldset,img{
+	border:0;
+}
+ins,a {
+	text-decoration:none;
+}
+/*--联系地图--*/
+.contact_map{
+	position:relative;
+	margin:0 auto;
+	width:550px;
+	height:434px;
+}
+.contact_map #cmap{
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:10;
+}
+.contact_map .cm_links a{
+	position:absolute;
+	z-index:100;
+	padding-left:13px;
+	width:40px;
+	height:16px;
+	line-height:16px;
+	color:#3977C1;
+	cursor:default;
+	background:url(img/icon4.gif) no-repeat left center;
+	outline:none;
+}
+.contact_map .cm_links a.on{
+	cursor:pointer;
+	background:url(img/icon3.gif) no-repeat left center;	
+}
+.contact_map a.xj{left:100px;top:126px;}
+.contact_map a.xz{left:91px;top:256px;}
+.contact_map a.qh{left:175px;top:200px;}
+.contact_map a.gs{left:188px;top:157px;}
+.contact_map a.yn{left:238px;top:348px;}
+
+.contact_map a.sc{left:250px;top:284px;}
+.contact_map a.nmg{left:288px;top:157px;}
+.contact_map a.gz{left:294px;top:324px;}
+.contact_map a.nx{left:297px;top:199px;}
+.contact_map a.cq{left:304px;top:290px;}
+
+.contact_map a.gx{left:318px;top:358px;}
+.contact_map a.sx{left:314px;top:240px;}
+.contact_map a.shx{left:352px;top:207px;}
+.contact_map a.hn{left:345px;top:414px;}
+.contact_map a.hun{left:347px;top:311px;}
+
+.contact_map a.hb{left:352px;top:272px;}
+.contact_map a.hen{left:358px;top:236px;}
+.contact_map a.heb{left:382px;top:178px;}
+.contact_map a.sd{left:404px;top:207px;}
+.contact_map a.bj{left:400px;top:160px;}
+
+.contact_map a.tj{left:430px;top:148px;}
+.contact_map a.ln{left:446px;top:132px;}
+.contact_map a.gd{left:389px;top:353px;}
+.contact_map a.jx{left:399px;top:298px;}
+.contact_map a.ah{left:412px;top:263px;}
+
+.contact_map a.fj{left:428px;top:325px;}
+.contact_map a.zj{left:447px;top:290px;}
+.contact_map a.js{left:444px;top:241px;}
+.contact_map a.sh{left:457px;top:271px;}
+.contact_map a.jl{left:469px;top:105px;}
+
+.contact_map a.hlj{left:475px;top:66px;}
+.contact_map a.hk{left:404px;top:386px;}
+.contact_map a.tw{left:471px;top:352px;}
+
+.contact_map .hide_box{
+	position:absolute;
+	z-index:999;
+	left:50px;
+	top:150px;
+	width:460px;
+	height:160px;
+	border:1px solid #eee;
+	overflow:hidden;
+	display:none;
+}
+
+.contact_map .hide_box h4{height:30px;line-height:30px;overflow:hidden;background:#FFF;color:#0057AB;padding:0 0 0 10px;font-size:14px; border-bottom:1px #eee solid; font-weight:bold;}
+.contact_map .hide_box h4 strong{
+	float:left;
+	width:100px;
+}
+.contact_map .hide_box h4 a
+{width:30px;line-height:30px;height:30px;font-family:arial;overflow:hidden;display:block;background:#2276CE;color:#fff;float:right;text-align:center;text-decoration:none;font-size:14px;font-weight:normal;_font-size:12px;}
+.hide_box .easyDialog_text, .hide_box p{padding:10px; height:120px; background:url(img/tr_bg1.png);}
+
+.contact_map .map_pic{
+	float:left;
+	width:170px;
+}
+.contact_map .map_pic img{
+	width:161px;
+	height:96px;
+	border: 1px solid #C3DEF8;
+}
+.contact_map .map_text{
+	float:right;
+	width:260px;
+	height:100px;
+	overflow:auto;
+}

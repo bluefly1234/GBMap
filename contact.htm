@@ -1,0 +1,112 @@
+<!DOCtype html>
+<html>
+<head>
+<meta http-equiv="Content-Language" content="zh-cn" />
+<meta charset="utf-8" />
+<meta name="author" content="givenlovs@msn.com" /> 
+<meta name="description" content="中国地图" />
+<meta name="keywords" content="中国地图" />
+<title>中国地图</title>
+<link rel="stylesheet" href="style/css.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	var $iframeContent = $("#iframe_content");
+	var $mapBox = $('#JMapBox');
+
+	//弹出层
+	$('.contact_map .cm_links a').each(function(){
+
+			var $this = $(this);
+			var iframeID = $this.attr('rel');
+
+			$this.click(function(){
+				$iframeContent.empty();
+				if( $this.hasClass('on') ){
+						$this.parents('.contact_map').find('h4 strong').text($(this).text());
+						$.ajax({
+							url: "iframe.htm",
+							cache: false,
+							data: 'id=' + iframeID,
+							success: function(html){
+								$iframeContent.append(html);
+								$mapBox.show();
+							}
+						});
+				}
+				return false;
+			});
+	});
+
+	$mapBox.find('#close_ED').click(function(){
+		$mapBox.hide();
+		$iframeContent.empty();
+	});
+});
+</script>
+</head>
+<body>
+<div id="wrapper">
+
+
+
+				<div class="contact_map">
+					<img id="cmap" src="images/map1.jpg" alt="地图" />
+					<div class="cm_links">
+						<a href="#" rel="01" class="xj">新疆</a>
+						<a href="#" rel="02" class="xz">西藏</a>
+						<a href="#" rel="03" class="qh">青海</a>
+						<a href="#" rel="04" class="gs">甘肃</a>
+						<a href="#" rel="04" class="yn">云南</a>
+
+						<a href="#" rel="04" class="sc">四川</a>
+						<a href="#" rel="05" class="nmg">内蒙古</a>
+						<a href="#" rel="06" class="gz">贵州</a>
+						<a href="#" rel="07" class="nx">宁夏</a>
+						<a href="#" rel="08" class="cq">重庆</a>
+
+						<a href="#" rel="09" class="gx on">广西</a>
+						<a href="#" rel="10" class="sx">陕西</a>
+						<a href="#" rel="11" class="shx">山西</a>
+						<a href="#" rel="12" class="hn">海南</a>
+						<a href="#" rel="13" class="hun">湖南</a>
+
+						<a href="#" rel="14" class="hb">湖北</a>
+						<a href="#" rel="15" class="hen on">河南</a>
+						<a href="#" rel="16" class="heb">河北</a>
+						<a href="#" rel="17" class="sd">山东</a>
+						<a href="#" rel="18" class="bj">北京</a>
+
+						<a href="#" rel="19" class="tj">天津</a>
+						<a href="#" rel="20" class="ln">辽宁</a>
+						<a href="#" rel="21" class="gd on">广东</a>
+						<a href="#" rel="22" class="jx">江西</a>
+						<a href="#" rel="23" class="ah">安徽</a>
+
+						<a href="#" rel="24" class="fj">福建</a>
+						<a href="#" rel="25" class="zj on">浙江</a>
+						<a href="#" rel="26" class="js">江苏</a>
+						<a href="#" rel="27" class="sh on">上海</a>
+						<a href="#" rel="28" class="jl">吉林</a>
+
+						<a href="#" rel="29" class="hlj">黑龙江</a>
+						<a href="#" rel="30" class="hk">香港</a>
+						<a href="#" rel="31" class="tw">台湾</a>
+					</div>
+<!--弹出层S-->
+<div class="hide_box" id="JMapBox">
+<h4><strong>中国</strong><a id="close_ED" href="javascript:void(0)" title="Close window">&times;</a></h4>
+<div id="iframe_content" class="easyDialog_text"></div>
+</div>
+<!--弹出层E-->
+ </div>
+  </div>
+
+
+
+
+
+</body>
+</html>
+
+
